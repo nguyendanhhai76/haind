@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Academy Shop</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+ 
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/cssme.css">
+
+  
+</head>
+
+<body onload="renderProduct ()">
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+      <div class="container_slogent">
+        <h1><a href="index.html">Welcome Academy Shop </a></h1>
+      
+        <h2>We are pleased to serve you !!! </h2></div>
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#portfolio">Cửa hàng</a></li>
+          <li><a class="nav-link" href="#services" id="cart">Giỏ hàng của tôi</a></li>
+          <li><a class="nav-link" href="#about" id="add-product">Thêm sản phẩm</a></li>
+          
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+     
+    </div>
+    
+    <div class="login-signup">
+      <div class="login pointer">Đăng Nhập</div>
+      <div class="line"></div>
+      <div class="signup pointer">Đăng Kí</div>
+    </div>
+    </header><!-- End Header -->
+
+  <!-- form Đăng Kí  -->
+  <div class="auth-form js-auth-form-signup ">
+    <div class="auth-form__header">
+      <h3 class="auth-form__heading">Đăng Kí</h3>
+      <span class="js-close-form close-form-signup">X</span>
+    </div>
+    <div class="auth-form__form">
+      <div class="auth-form__group">
+        <input type="text" class="auth-form__input" placeholder="Tên đăng nhập hoặc email" id="user">
+      </div>
+      <div class="auth-form__group">
+        <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" id="pass">
+      </div>
+      <div class="auth-form__group">
+        <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu  " id="pass2">
+      </div>
+      <div class="auth-form_btn">
+        <button onclick="signup ()">Đăng kí</button>
+      </div>
+      
+
+    </div>
+  </div>
+  <!-- form đăng Nhập -->
+  <div class="auth-form js-auth-form-login ">
+    <div class="auth-form__header">
+      <h3 class="auth-form__heading">Đăng Nhập</h3> 
+      <span class="js-close-form close-form-login">X</span>
+    </div>
+    <div class="auth-form__form">
+      <div class="auth-form__group">
+        <input type="text" class="auth-form__input" placeholder="Tên đăng nhập hoặc email" id="userLogin">
+      </div>
+      <div class="auth-form__group">
+        <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" id="passLogin">
+      </div>
+      
+      <div class="auth-form_btn">
+        <button onclick="checkLogin ()">Đăng Nhập</button>
+        <a href="">Quên mật khẩu?</a>
+        </div>
+      
+
+    </div>
+  </div>
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>Academy</h2>
+        <p>Add your products</p>
+      </div>
+      <div class="input-product">
+        <div>
+          <label for="">tên sản phẩm :</label> 
+        <input type="text" name="" id="product-name" class="input-addproduct">
+        </div>
+  
+        <div>
+          <label for="">Link hình ảnh :</label>
+        <input type="text" name="" id="product-nsx" class="input-addproduct">
+        </div>
+  
+        <div>
+          <label for="">Giá :</label> 
+        <input type="text" name="" id="product-price" class="input-addproduct">
+         
+        </div>
+
+        <div style="padding-bottom: 30px;">
+          <label for="">Mô tả :</label> 
+        <input type="text" name="" id="product-status" class="input-addproduct">
+         
+        </div>
+
+        <div>
+          <input type="hidden" id="index">
+        </div>
+        
+        
+
+        <div class="btn-add-product">
+          <button id="save" class="btn-add " onclick="validateInput ()" style="cursor: pointer; "> Add </button>
+          <button id="update" onclick="changeProduct()" style="cursor: pointer; display: none;"> Update </button>
+        </div>
+
+        <table class="cart-myproduct" cellpadding="20" id="addproduct" style="margin-top: 100px;">
+          <tr>
+            <th>ID</th>
+            <th style="width: 50%; text-align: center;">Product</th>
+            <th style="width: 20%;">Nhà Sản Xuất</th>
+            <th>Giá Tiền</th>
+            <th>Trạng Thái</th>
+            <th>Action</th>
+            
+          </tr>
+         
+  
+          
+  
+          
+        </table>
+     
+      </div>
+
+      
+
+    </div><!-- End About Me -->
+
+ 
+
+    </div>
+
+  </section><!-- End About Section -->
+
+  
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Academy</h2>
+        <p>Your Cart</p>
+      </div>
+      <table class="cart" cellpadding="15" id="tableContent">
+        
+      </table>
+
+      
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      
+      <div class="section-title">
+        <h2>Academy</h2>
+        <p> PRODUCTS</p>
+        <div class="cart-product">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <div id="cart-number" class="cart-number">0</div>
+
+
+        </div>
+      </div>
+      
+      
+      <div class=" shop-container" id="products">
+        
+       
+      </div>
+    </section><!-- End Portfolio Section -->
+       
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script type="module" src="./assets/js/shop.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/jsme.js"></script>
+    <!-- <script src="./assets/js/product-creat.js"></script> -->
+  
+  </body>
+  
+  </html>
+       
+        
+
+        
+
+
+        
+        
+        
+
+
+
+  
+
+  
+
+
+  
+
+  
